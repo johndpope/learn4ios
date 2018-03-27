@@ -15,8 +15,10 @@ infix operator **: MultiplicationPrecedence
 
 public class Learn4iOS {
 
-    private static var _graph: Graph = Graph(name: "DEFAULT")
-    public static var activeGraph: Graph {
+    public static var instance = Learn4iOS()
+    
+    private var _graph: Graph
+    public var activeGraph: Graph {
         get {
             return _graph
         }
@@ -25,28 +27,26 @@ public class Learn4iOS {
         }
     }
 
-    private static var _sess: Session? = nil
-    public static var activeSession: Session {
+    private var _sess: Session
+    public var activeSession: Session {
         get {
-            if (_sess == nil) {
-                _sess = Session(_graph)
-                _graph.session = _sess
-            }
-            return _sess!
+            return _sess
         }
         set {
             _sess = newValue
         }
     }
 
-    static var factory: ExpressionFactory {
+    var factory: ExpressionFactory {
         get {
             return activeGraph.factory
         }
     }
 
     init() {
-
+        _graph = Graph(name: "Default")
+        _sess = Session(_graph)
+        _graph.session = _sess
     }
 
 }

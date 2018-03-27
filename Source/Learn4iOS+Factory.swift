@@ -8,39 +8,39 @@
 import Foundation
 
 public func parameter(_ value: Tensor, name: String? = nil) -> Expression {
-    return Learn4iOS.factory.parameter(value, name: name)
+    return Learn4iOS.instance.factory.parameter(value, name: name)
 }
 
 public func variable(_ shape: [Int], name: String? = nil) -> Expression {
-    return Learn4iOS.factory.variable(shape, name: name)
+    return Learn4iOS.instance.factory.variable(shape, name: name)
 }
 
 public func add(_ left: Expression, _ right: Expression, name: String? = nil) -> Expression {
-    return Learn4iOS.factory.add(left, right, name: name)
+    return Learn4iOS.instance.factory.add(left, right, name: name)
 }
 
 public func subtract(_ left: Expression, _ right: Expression, name: String? = nil) -> Expression {
-    return Learn4iOS.factory.subtract(left, right, name: name)
+    return Learn4iOS.instance.factory.subtract(left, right, name: name)
 }
 
 public func multiply(_ left: Expression, _ right: Expression, name: String? = nil) -> Expression {
-    return Learn4iOS.factory.multiply(left, right, name: name)
+    return Learn4iOS.instance.factory.multiply(left, right, name: name)
 }
 
 public func divide(_ left: Expression, _ right: Expression, name: String? = nil) -> Expression {
-    return Learn4iOS.factory.divide(left, right, name: name)
+    return Learn4iOS.instance.factory.divide(left, right, name: name)
 }
 
 public func abs(_ base: Expression, name: String? = nil) -> Expression {
-    return Learn4iOS.factory.abs(base, name: name)
+    return Learn4iOS.instance.factory.abs(base, name: name)
 }
 
 public func exp(_ base: Expression, name: String? = nil) -> Expression {
-    return Learn4iOS.factory.exp(base, name: name)
+    return Learn4iOS.instance.factory.exp(base, name: name)
 }
 
 public func reduceSum(_ base: Expression, _ dimension: Int = -1, name: String? = nil) -> Expression {
-    return Learn4iOS.factory.reduceSum(base, dimension, name: name)
+    return Learn4iOS.instance.factory.reduceSum(base, dimension, name: name)
 }
 
 public func gradients(_ target: Expression, _ nodes: [Expression]) -> [Expression] {

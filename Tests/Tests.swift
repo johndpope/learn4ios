@@ -24,6 +24,18 @@ class Tests: XCTestCase {
     func testExample() {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
+        let a = Tensor(data: [1,2,3], shape: [3])
+        let b = Tensor(data: [1, 2], shape: [2, 1])
+        let c = a + b
+        
+        print(c)
+        
+        let l = parameter(a)
+        let m = parameter(b)
+        let k = l + m
+        
+        print(k.value)
+
     }
     
     func testPerformanceExample() {
