@@ -1,0 +1,4 @@
+module Liblearn [system] {
+    header "learn.h"
+    export *
+}

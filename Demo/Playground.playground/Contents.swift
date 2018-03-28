@@ -1,6 +1,5 @@
 //: Playground - noun: a place where people can play
 
-import UIKit
 import Learn4iOS
 
 var str = "Hello, playground"

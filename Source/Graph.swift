@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Liblearn
 
 public class Graph {
 
@@ -47,6 +48,7 @@ public class Graph {
 
     public init(name: String) {
         _name = name
+        test()
     }
 
     /// Adds a node to this graph.
