@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Tensor4iOS
 
 /// Used to evaluate a graph.
 /// Must be created with a session

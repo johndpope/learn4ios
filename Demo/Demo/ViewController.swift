@@ -8,6 +8,7 @@
 
 import UIKit
 import Learn4iOS
+import Tensor4iOS
 
 class ViewController: UIViewController {
 
@@ -19,6 +20,9 @@ class ViewController: UIViewController {
         let c = a + b
 
         print(c)
+
+        let k = parameter(a)
+        print(k)
     }
 
     override func didReceiveMemoryWarning() {

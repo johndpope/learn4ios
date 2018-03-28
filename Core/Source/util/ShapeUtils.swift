@@ -7,9 +7,9 @@
 
 import Foundation
 
-class ShapeUtils {
+public class ShapeUtils {
 
-    static func broadcastShapes(_ a: [Int], _ b: [Int]) -> [Int] {
+    public static func broadcastShapes(_ a: [Int], _ b: [Int]) -> [Int] {
         let rank = a.count > b.count ? a.count : b.count
         var result = a.count > b.count ? a : b
         var aIndex = a.count - 1
@@ -40,7 +40,7 @@ class ShapeUtils {
         return result;
     }
 
-    static func getStrides(_ shape: [Int]) -> [Int] {
+    public static func getStrides(_ shape: [Int]) -> [Int] {
         let rank = shape.count
         var strides = shape
         var val = 1
@@ -53,7 +53,7 @@ class ShapeUtils {
         return strides
     }
 
-    static func getLength(_ shape: [Int]) -> Int {
+    public static func getLength(_ shape: [Int]) -> Int {
         var len = 1
         for dim in shape {
             len *= dim
@@ -61,7 +61,7 @@ class ShapeUtils {
         return len
     }
 
-    static func reduce(_ shape: [Int], _ dimension: Int) -> [Int] {
+    public static func reduce(_ shape: [Int], _ dimension: Int) -> [Int] {
         var result = shape // copy
 
         for i in 0..<shape.count {
@@ -73,7 +73,7 @@ class ShapeUtils {
         return result
     }
 
-    static func getReducedDims(_ shape: [Int], _ dim: Int) -> [Bool] {
+    public static func getReducedDims(_ shape: [Int], _ dim: Int) -> [Bool] {
         if (dim == -1) {
             return Array(repeating: true, count: shape.count)
         }
@@ -83,7 +83,7 @@ class ShapeUtils {
         return reducedDims;
     }
 
-    static func getReducedDims(_ shape: [Int], _ dims: [Int]) -> [Bool] {
+    public static func getReducedDims(_ shape: [Int], _ dims: [Int]) -> [Bool] {
         var reducedDims: [Bool] = Array(repeating: false, count: shape.count)
         for dim in dims {
             reducedDims[dim] = true
@@ -91,7 +91,7 @@ class ShapeUtils {
         return reducedDims;
     }
 
-    static func reduceShape(_ shape: [Int], _ dim: Int = -1, keepDims: Bool = false) -> [Int] {
+    public static func reduceShape(_ shape: [Int], _ dim: Int = -1, keepDims: Bool = false) -> [Int] {
         var resultShape: [Int] = []
         let reducedDims = ShapeUtils.getReducedDims(shape, dim)
 
@@ -106,7 +106,7 @@ class ShapeUtils {
         return resultShape;
     }
 
-    static func reduceShape(_ shape: [Int], _ dims: [Int], keepDims: Bool = false) -> [Int] {
+    public static func reduceShape(_ shape: [Int], _ dims: [Int], keepDims: Bool = false) -> [Int] {
         var resultShape: [Int] = []
         let reducedDims = ShapeUtils.getReducedDims(shape, dims)
 
@@ -121,7 +121,7 @@ class ShapeUtils {
         return resultShape;
     }
 
-    static func shapeEquals(_ a: [Int], _ b: [Int]) -> Bool {
+    public static func shapeEquals(_ a: [Int], _ b: [Int]) -> Bool {
         if (a.count != b.count) {
             return false;
         }
@@ -135,7 +135,7 @@ class ShapeUtils {
         return true;
     }
 
-    static func shapeIsCompatible(_ a: [Int], _ b: [Int]) -> Bool {
+    public static func shapeIsCompatible(_ a: [Int], _ b: [Int]) -> Bool {
         let rank = max(a.count, b.count)
         var aIndex = a.count - 1
         var bIndex = b.count - 1
@@ -156,7 +156,7 @@ class ShapeUtils {
         return true;
     }
 
-    static func getReductionIndices(_ a: [Int], _ b: [Int]) -> (left: [Int], right: [Int]) {
+    public static func getReductionIndices(_ a: [Int], _ b: [Int]) -> (left: [Int], right: [Int]) {
         let resultShape = ShapeUtils.broadcastShapes(a, b)
         var left: [Int] = []
         var right: [Int] = []

@@ -1,6 +1,7 @@
 //: Playground - noun: a place where people can play
 
 import Learn4iOS
+import Tensor4iOS
 
 var str = "Hello, playground"
 

@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Tensor4iOS
 
 public class Cosine: TransformExpression {
 

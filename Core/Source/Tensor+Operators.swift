@@ -7,6 +7,12 @@
 
 import Foundation
 
+// This is for matmul. Since swift cannot use @ as part of the operator name...
+infix operator *&: MultiplicationPrecedence
+
+// Power operator
+infix operator **: MultiplicationPrecedence
+
 extension Tensor {
 
     /**************** Arithmetic *******************/

@@ -34,8 +34,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "77E9F927206A670700A65A97"
-               BuildableName = "Tests.xctest"
-               BlueprintName = "Tests"
+               BuildableName = "Learn4iOS_Tests.xctest"
+               BlueprintName = "Learn4iOS_Tests"
                ReferencedContainer = "container:Learn4iOS.xcodeproj">
             </BuildableReference>
             <SkippedTests>

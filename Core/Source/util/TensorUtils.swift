@@ -7,9 +7,9 @@
 
 import Foundation
 
-class TensorUtils {
+public class TensorUtils {
 
-    static func computeOffset(_ indices: [Int], _ shape: [Int], _ strides: [Int]) -> Int {
+    public static func computeOffset(_ indices: [Int], _ shape: [Int], _ strides: [Int]) -> Int {
         var offset = 0;
         for i in 0..<shape.count {
             offset += indices[i] * strides[i]
@@ -17,7 +17,7 @@ class TensorUtils {
         return offset;
     }
 
-    static func broadcast(_ tensor: Tensor, _ shape: [Int]) -> Tensor {
+    public static func broadcast(_ tensor: Tensor, _ shape: [Int]) -> Tensor {
 
         if (ShapeUtils.shapeEquals(tensor.shape, shape)) {
             return tensor

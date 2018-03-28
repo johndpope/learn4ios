@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Tensor4iOS
 
 /// A Session is used to evaluate a graph independent of the graph itself
 public class Session {

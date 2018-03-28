@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Tensor4iOS
 
 public func parameter(_ value: Tensor, name: String? = nil) -> Expression {
     return Learn4iOS.instance.factory.parameter(value, name: name)

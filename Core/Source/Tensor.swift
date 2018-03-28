@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Liblearn
 
 public class Tensor: CustomStringConvertible {
 
@@ -81,6 +82,7 @@ public class Tensor: CustomStringConvertible {
         self.data = data
         self.offset = offset
         _shape = Shape(shape)
+        test()
     }
 
     // Create a single Scalar tensor

@@ -6,7 +6,7 @@
 //
 
 import Foundation
-import Liblearn
+import Tensor4iOS
 
 public class Graph {
 
@@ -48,7 +48,7 @@ public class Graph {
 
     public init(name: String) {
         _name = name
-        test()
+//        test()
     }
 
     /// Adds a node to this graph.

@@ -7,4 +7,7 @@
    <FileRef
       location = "group:Learn4iOS.xcodeproj">
    </FileRef>
+   <FileRef
+      location = "group:Core/Tensor4iOS.xcodeproj">
+   </FileRef>
 </Workspace>
